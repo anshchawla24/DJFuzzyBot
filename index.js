@@ -17,6 +17,8 @@ app.get('/',(req, res) => {
     res.send("Fuzzy says hello!");
 });
 
+app.listen(port);
+
 
 
 
@@ -137,4 +139,3 @@ function creators(message) {
 }
 
 bot.login(token);
-app.listen(process.env.PORT, '0.0.0.0');
