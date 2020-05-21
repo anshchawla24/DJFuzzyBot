@@ -61,6 +61,28 @@ bot.on('message', message => {
                 console.log(error);
             })
             break;
+
+            case 'skip':
+                var server = servers[message.guild.id];
+                if(server.dispatcher) server.dispatcher.end();
+                message.channel.send("Skipping the song!");
+                break;
+
+            case 'stop':
+                var server = server[message.guild.id];
+                if(message.guild.voiceConnection){
+                    for(var i = server.queue.length - 1; i >= 0; i--){
+ 
+                        server.queue.splice(i, 1);
+                    }
+
+                    server.dispatcher.end();
+                    message.channel.send("Ending the Queue and leaving the voice channel");
+                    console.log('stopped the queue');
+                }
+
+                if(message.guild.connection) message.guild.voiceConeection.disconnect();
+                break;
     }
 });
 bot.login(token);
