@@ -69,7 +69,7 @@ bot.on('message', message => {
                 break;
 
             case 'stop':
-                var server = server[message.guild.id];
+                var server = servers[message.guild.id];
                 if(message.guild.voiceConnection){
                     for(var i = server.queue.length - 1; i >= 0; i--){
  
