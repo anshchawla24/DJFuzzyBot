@@ -137,4 +137,4 @@ function creators(message) {
 }
 
 bot.login(token);
-app.listen(port,console.log("Server running at port", port));
+app.listen(process.env.PORT, '0.0.0.0');
