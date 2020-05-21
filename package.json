@@ -1,12 +1,12 @@
 {
     "name": "djfuzzybot",
     "version": "1.0.0",
-    "description": "",
+    "description": "Super awesome discord music bot",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "author": "ansh",
+    "author": "Ansh & Hrishi",
     "license": "ISC",
     "dependencies": {
         "discord.js": "^12.2.0",
