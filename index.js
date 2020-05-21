@@ -7,8 +7,8 @@ const messageEmbedFuzzy = new MessageEmbed();
 const messageEmbedRoe = new MessageEmbed();
 
 const ytdl = require('ytdl-core');
-const token = require('./config/token');
-const PREFIX = '!';
+const token = process.env.TOKEN;
+const PREFIX = '$';
 
 
 bot.once('ready', () => {
