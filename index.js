@@ -12,7 +12,7 @@ const PREFIX = '$';
 
 
 bot.once('ready', () => {
-    console.log('Bot is working!');
+    console.log('Bot is working!');//bot is working
 });
 
 //Using a map instead of an array to seperate bot commands over different servers
