@@ -4,12 +4,14 @@
     "description": "Super awesome discord music bot",
     "main": "index.js",
     "scripts": {
-        "start": "node index.js", "dev":"env-cmd -f ./config/dev.env  node index.js"
+        "start": "node index.js",
+        "dev": "env-cmd -f ./config/dev.env  node index.js"
     },
     "author": "Ansh & Hrishi",
     "license": "ISC",
     "dependencies": {
         "discord.js": "^12.2.0",
+        "express": "^4.17.1",
         "opusscript": "0.0.7",
         "ytdl-core": "^2.1.3"
     },

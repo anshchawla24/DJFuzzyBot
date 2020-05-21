@@ -1,7 +1,8 @@
 const {
     Client,
     MessageEmbed,
-} = require('discord.js'); // requiring discord API
+} = require('discord.js');
+const express = require('express'); // requiring discord API
 const bot = new Client();
 const messageEmbedFuzzy = new MessageEmbed();
 const messageEmbedRoe = new MessageEmbed();
@@ -9,6 +10,14 @@ const messageEmbedRoe = new MessageEmbed();
 const ytdl = require('ytdl-core');
 const token = process.env.TOKEN;
 const PREFIX = '$';
+const app = express();
+
+const port = process.env.PORT || 3000;
+app.get('/',(req, res) => {
+    res.send("Fuzzy says hello!");
+});
+
+
 
 
 bot.once('ready', () => {
@@ -128,3 +137,4 @@ function creators(message) {
 }
 
 bot.login(token);
+app.listen(port,console.log("Server running at port", port));
