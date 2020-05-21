@@ -4,8 +4,9 @@ const {
 } = require('discord.js'); // requiring discord API
 const bot = new Client();
 const ytdl = require('ytdl-core');
+const token = require('./config/token');
 
-const token = 'Your Discord Token Here';
+
 const PREFIX = '!';
 
 bot.on('ready', () => {
