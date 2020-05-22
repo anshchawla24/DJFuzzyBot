@@ -2,28 +2,17 @@ const {
     Client,
     MessageEmbed,
 } = require('discord.js');
-const express = require('express'); // requiring discord API
+const ytdl = require('ytdl-core');
+
 const bot = new Client();
 const messageEmbedFuzzy = new MessageEmbed();
 const messageEmbedRoe = new MessageEmbed();
 
-const ytdl = require('ytdl-core');
 const token = process.env.TOKEN;
 const PREFIX = '$';
-const app = express();
-
-const port = process.env.PORT || 5000;
-app.get('/',(req, res) => {
-    res.send("Fuzzy says hello!"); //helloo
-});
-
-app.listen(port);
-
-
-
 
 bot.once('ready', () => {
-    console.log('Bot is working!');//bot is working
+    console.log('Bot is working!'); //bot is working
 });
 
 //Using a map instead of an array to seperate bot commands over different servers
