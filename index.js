@@ -3,14 +3,27 @@ const {
     MessageEmbed,
 } = require('discord.js');
 const ytdl = require('ytdl-core');
+const express = require('express');
 
 const bot = new Client();
 const messageEmbedFuzzy = new MessageEmbed();
 const messageEmbedRoe = new MessageEmbed();
+const app = express();
 
 const token = process.env.TOKEN;
+const port = process.env.PORT || 3000;
 const PREFIX = '$';
 
+//Express Code 
+app.get('/', (req, res) => {
+    res.send("Fuzzy Says Hi!!")
+})
+
+app.listen(port, console.log("Server running on port : " + port));
+
+
+
+//Discord JS Code
 bot.once('ready', () => {
     console.log('Bot is working!'); //bot is working
 });
@@ -39,6 +52,8 @@ bot.on('message', message => {
     }
 });
 
+
+//Functions for Discord JS
 
 async function start(message, serverQueue, args) {
     const voiceChannel = message.member.voice.channel;
